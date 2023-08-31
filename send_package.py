@@ -4,7 +4,7 @@ def construct_package(mac):
     mac = [int(x, 16) for x in mac]
     mac=mac*16
     array.extend(mac)
-    finalarray=array
+    finalarray=bytes(array)
     return finalarray
 
 
