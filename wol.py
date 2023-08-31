@@ -41,7 +41,7 @@ mymac = gma()
 
 #getting brodcast addr
 
-
+#test
 if arg=="peli": 
     finalarray=construct_package(pelimac)
     sender(finalarray)
