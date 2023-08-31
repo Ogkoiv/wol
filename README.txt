@@ -1,0 +1,2 @@
+Small python script that sends magic packets, to use this define your own mac addrs to code or give it as an command line arg using : as separators.
+Ps1 scripts sends magic packet and opens ssh to the computer
