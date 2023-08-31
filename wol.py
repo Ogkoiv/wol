@@ -10,7 +10,7 @@ broadcast_port=7
 
 arg=sys.argv[1]
 
-#sender
+#sender functions opens udp socket and broadcastst
 def sender(finalarray,broadcast_addr):
     udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     udp_socket.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
@@ -43,8 +43,11 @@ mymac = gma()
 subnet = ipaddress.IPv4Network(myip + '/' + MASK, False)
 broadcast_addr=str(subnet.broadcast_address)
 
-
-if arg=="peli": 
+if len(arg) > 8: # if there is mac addr as an arg
+    finalarray=construct_package(arg)
+    sender(finalarray,broadcast_addr)
+    print("packet was sended to provided mac")
+elif arg=="peli": 
     finalarray=construct_package(pelimac)
     sender(finalarray)
     print("packet was sent to peli")
