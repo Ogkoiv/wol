@@ -7,7 +7,6 @@ import ipaddress
 MASK='255.255.255.0'
 broadcast_port=7
 
-
 arg=sys.argv[1]
 
 #sender functions opens udp socket and broadcastst
