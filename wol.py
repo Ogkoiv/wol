@@ -32,9 +32,6 @@ def gma():
     
     return mac_address
 
-#defines variables
-servumac = 'B0:6E:BF:31:CC:C4'
-pelimac = "04:42:1A:04:1F:92"
 myip = get_ip_address()
 mymac = gma()
 
@@ -47,14 +44,6 @@ if len(arg) > 8: # if there is mac addr as an arg
     finalarray=construct_package(arg)
     sender(finalarray,broadcast_addr)
     print("packet was sended to provided mac")
-elif arg=="peli": 
-    finalarray=construct_package(pelimac)
-    sender(finalarray)
-    print("packet was sent to peli")
-elif arg =="servu":
-    finalarray=construct_package(servumac)
-    sender(finalarray,broadcast_addr)
-    print("packet was sent to servu")
 else:
     print("mac was not accessed")
 

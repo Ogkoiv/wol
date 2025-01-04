@@ -1,8 +1,8 @@
 Write-Host("Starting script")
 Set-Location -Path C:\Users\Username\wol
-python3 wol.py servu #servu is alias for the ssh connection, use your own connection settings here
+python3 wol.py #MACADDR HERE
 Write-Host("magic packet was sent waiting for startup")
-Start-Sleep -Seconds 180
-ssh servu
+Start-Sleep -Seconds 60
+ssh #IPADDRHERE
 Set-Location -Path C:\Users\Username
 exit(1)
